@@ -7,7 +7,7 @@ export async function createClient() {
 
     return createServerClient(
         process.env.NEXT_PUBLIC_SUPABASE_URL || "https://example.com",
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "",
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "dummy-key",
         {
             cookies: {
                 getAll() {
