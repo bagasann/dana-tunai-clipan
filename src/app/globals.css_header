@@ -1,0 +1,8 @@
+/* eslint-disable */
+/* stylelint-disable */
+/* 
+  NOTE: This file uses Tailwind CSS v4 syntax (@theme).
+  If your editor warns about "Unknown at rule @theme", it is a false positive 
+  from older CSS language servers. It is valid syntax for Tailwind v4.
+*/
+@import "tailwindcss";
