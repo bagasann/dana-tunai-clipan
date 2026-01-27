@@ -52,13 +52,12 @@ export const ToyotaSimulation = () => {
                     {banners.map((item, index) => (
                         <div key={index} className="group bg-white/5 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 hover:border-blue-400/30 hover:shadow-[0_0_60px_rgba(30,58,138,0.4)] transition-all duration-500 flex flex-col relative focus-within:ring-2 focus-within:ring-blue-500">
                             {/* Card Content: Image Only */}
-                            <div className="relative aspect-[4/5] overflow-hidden">
+                            <div className="relative aspect-[4/5] overflow-hidden bg-black flex items-center justify-center">
                                 <img
                                     src={item.image}
                                     alt={item.alt}
-                                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                                    className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-1000"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-blue-950 via-transparent to-transparent opacity-60"></div>
                             </div>
 
                             {/* Action Button */}
