@@ -91,7 +91,7 @@ Terima kasih`;
                 </div>
 
                 {/* Reward / Cuan Banner */}
-                <div className="mt-12 group">
+                <div id="referral" className="mt-12 group">
                     <Link
                         href={`https://wa.me/6281214606160?text=${encodeURIComponent("Halo, saya ingin menanyakan tentang promo Reward/Hadiah 1 JT jaminan BPKB Mobil.")}`}
                         target="_blank"

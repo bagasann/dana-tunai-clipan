@@ -48,6 +48,18 @@ export function Hero() {
         return () => clearInterval(timer)
     }, [nextSlide])
 
+    const waMessageTemplate = `Halo, saya tertarik dengan layanan Dana Tunai. Mohon informasinya lebih lanjut. 
+Silahkan isi data diri terlebih dahulu
+
+Nama :
+Alamat :
+No HP :
+Unit Kendaraan :
+Tahun :
+Dana yang di butuhkan:
+
+Terima kasih`;
+
     return (
         <div className="relative bg-white overflow-hidden pt-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,12 +95,12 @@ export function Hero() {
                         </div>
 
                         <div className="mt-8 sm:flex sm:justify-center lg:justify-start gap-4 items-center">
-                            <Link href="#simulation">
+                            <Link href="#referral">
                                 <Button size="lg" className="w-full sm:w-auto shadow-xl h-14 px-10 text-lg rounded-2xl">
-                                    Simulasi Pinjaman
+                                    Referensi
                                 </Button>
                             </Link>
-                            <Link href="https://wa.me/6281214606160" target="_blank">
+                            <Link href={`https://wa.me/6281214606160?text=${encodeURIComponent(waMessageTemplate)}`} target="_blank">
                                 <Button variant="outline" size="lg" className="w-full sm:w-auto mt-3 sm:mt-0 h-14 px-10 text-lg rounded-2xl border-2">
                                     Hubungi Kami
                                 </Button>
