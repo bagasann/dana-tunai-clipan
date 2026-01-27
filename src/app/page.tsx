@@ -12,14 +12,14 @@ export default function Home() {
 
       {/* Features Section */}
       <section id="features" className="py-24 bg-blue-950 relative overflow-hidden">
-        {/* Background Image Overlay */}
-        <div
-          className="absolute inset-0 z-0 opacity-40 bg-cover bg-center"
-          style={{ backgroundImage: 'url("/features-bg.jpg")' }}
-        ></div>
-
-        {/* Gradient Overlay for better readability */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-blue-950 via-transparent to-blue-950"></div>
+        {/* CSS-based premium background effects */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/10 rounded-full blur-[120px]"></div>
+          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[120px]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)]"></div>
+          {/* Subtle grid pattern */}
+          <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="lg:text-center mb-16">
@@ -70,9 +70,8 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-blue-950 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center space-x-2 mb-8">
-            <div className="w-10 h-10 bg-blue-700 rounded-xl flex items-center justify-center text-white font-black italic">D</div>
-            <span className="text-2xl font-black tracking-tight uppercase">Dana Tunai</span>
+          <div className="flex items-center justify-center mb-10">
+            <img src="/logo.jpg" alt="Dana Tunai Logo" className="h-20 w-auto object-contain" />
           </div>
           <p className="text-blue-200/60 max-w-md mx-auto mb-10 text-sm font-medium">
             Solusi pembiayaan dana tunai terpercaya dengan jaminan BPKB Mobil. Proses mudah, aman, dan transparan.
