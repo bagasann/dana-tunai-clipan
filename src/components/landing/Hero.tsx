@@ -6,12 +6,31 @@ import Link from "next/link"
 import { useState, useEffect, useCallback } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
+const ImageWithFallback = ({ src, alt, fallbackSrc = "/hero.png", className }: { src: string; alt: string; fallbackSrc?: string; className?: string }) => {
+    const [imgSrc, setImgSrc] = useState(src)
+    const [hasError, setHasError] = useState(false)
+
+    return (
+        <img
+            src={imgSrc}
+            alt={alt}
+            className={className}
+            onError={() => {
+                if (!hasError) {
+                    setImgSrc(fallbackSrc)
+                    setHasError(true)
+                }
+            }}
+        />
+    )
+}
+
 export function Hero() {
     const images = [
         "/hero.png",
-        "/hero2.png", // User needs to provide this
-        "/hero3.png", // User needs to provide this
-        "/hero4.png", // User needs to provide this
+        "/hero2.png",
+        "/hero3.png",
+        "/hero4.png",
     ]
 
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -68,14 +87,10 @@ export function Hero() {
                             >
                                 {images.map((img, idx) => (
                                     <div key={idx} className="w-full h-full flex-shrink-0">
-                                        <img
+                                        <ImageWithFallback
                                             src={img}
                                             alt={`Slide ${idx + 1}`}
                                             className="w-full h-full object-contain drop-shadow-2xl"
-                                            onError={(e) => {
-                                                // Fallback if image not found
-                                                (e.target as HTMLImageElement).src = "/hero.png"
-                                            }}
                                         />
                                     </div>
                                 ))}
