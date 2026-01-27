@@ -22,7 +22,7 @@ export function Hero() {
                                     Simulasi Pinjaman
                                 </Button>
                             </Link>
-                            <Link href="https://wa.me/628993646841" target="_blank">
+                            <Link href="https://wa.me/6281214606160" target="_blank">
                                 <Button variant="outline" size="lg" className="w-full sm:w-auto mt-3 sm:mt-0">
                                     Hubungi Kami
                                 </Button>

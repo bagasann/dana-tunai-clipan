@@ -104,7 +104,7 @@ export const ToyotaSimulation = () => {
                                 </ul>
 
                                 <Link
-                                    href={`https://wa.me/628993646841?text=Halo, saya tertarik dengan simulasi Toyota Avanza ${sim.tenor}. Mohon informasinya lebih lanjut.`}
+                                    href={`https://wa.me/6281214606160?text=Halo, saya tertarik dengan simulasi Toyota Avanza ${sim.tenor}. Mohon informasinya lebih lanjut.`}
                                     target="_blank"
                                     className="w-full"
                                 >
