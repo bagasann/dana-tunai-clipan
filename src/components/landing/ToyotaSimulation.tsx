@@ -60,7 +60,7 @@ export const ToyotaSimulation = () => {
                             <img
                                 src="/avanza.png"
                                 alt="Toyota Avanza"
-                                className="relative max-w-full h-[300px] object-contain drop-shadow-2xl transform group-hover:scale-110 transition-transform duration-700"
+                                className="relative w-full h-auto max-h-[400px] object-contain drop-shadow-2xl transform group-hover:scale-105 transition-transform duration-700"
                             />
                         </div>
                     </div>

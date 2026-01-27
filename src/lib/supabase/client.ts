@@ -2,10 +2,17 @@
 import { createBrowserClient } from '@supabase/ssr'
 
 export function createClient() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  if (!supabaseUrl || !supabaseAnonKey || supabaseUrl === "https://example.com") {
+    console.error("Supabase environment variables are missing or using fallbacks! Check your .env.local file.");
+  }
+
   try {
     return createBrowserClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL || "https://example.com",
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "dummy-key"
+      supabaseUrl || "https://example.com",
+      supabaseAnonKey || "dummy-key"
     )
   } catch (e) {
     // Return a dummy object that satisfies the interface to prevent build crashes
