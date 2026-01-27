@@ -1,8 +1,7 @@
-
 import { Hero } from "@/components/landing/Hero";
 import { Navbar } from "@/components/landing/Navbar";
 import { ToyotaSimulation } from "@/components/landing/ToyotaSimulation";
-import { Zap, ShieldCheck, BadgePercent } from "lucide-react";
+import { Zap, ShieldCheck, BadgePercent, Monitor, MapPin, CheckCircle, Car, RefreshCcw, FileX } from "lucide-react";
 
 export default function Home() {
   return (
@@ -24,40 +23,58 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="lg:text-center mb-16">
             <h2 className="text-sm text-blue-400 font-extrabold tracking-[0.2em] uppercase mb-4 text-shadow-sm">Keunggulan Kami</h2>
-            <p className="text-4xl md:text-5xl leading-tight font-black tracking-tight text-white">
-              Mengapa Memilih Solusi Mudah Kredit Mobil?
+            <p className="text-3xl md:text-5xl leading-tight font-black tracking-tight text-white max-w-4xl mx-auto">
+              Mengapa Memilih Dana Tunai Dan Pembiayaan Kredit Mobil Bekas Disini?
             </p>
             <div className="w-20 h-1.5 bg-blue-600 lg:mx-auto mt-6 rounded-full shadow-[0_0_15px_rgba(37,99,235,0.5)]"></div>
           </div>
 
           <div className="mt-10">
-            <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  title: "Proses Tercepat",
-                  description: "Dana cair hanya dalam hitungan jam setelah dokumen lengkap dan disetujui tanpa ribet.",
-                  icon: <Zap className="h-8 w-8 text-blue-400" />,
+                  title: "Platform Digital Modern",
+                  description: "Kami menyediakan kemudahan akses Leasing & Finance secara digital untuk pengajuan kredit unit atau dana tunai.",
+                  icon: <Monitor className="h-8 w-8 text-blue-400" />,
                   color: "bg-blue-500/10"
                 },
                 {
-                  title: "Bunga Terendah",
-                  description: "Nikmati suku bunga kompetitif mulai dari 0.8% yang tidak akan memberatkan angsuran bulanan Anda.",
-                  icon: <BadgePercent className="h-8 w-8 text-emerald-400" />,
+                  title: "Area Bandung & Sekitarnya",
+                  description: "Sudah bekerja sama dengan seluruh leasing resmi yang berada di wilayah kota Bandung dan sekitarnya.",
+                  icon: <MapPin className="h-8 w-8 text-emerald-400" />,
                   color: "bg-emerald-500/10"
                 },
                 {
-                  title: "Aman & Legal",
-                  description: "Seluruh proses transparan dan didukung oleh lembaga pembiayaan terkemuka di Indonesia.",
-                  icon: <ShieldCheck className="h-8 w-8 text-indigo-400" />,
+                  title: "Proses Cepat & Tepat",
+                  description: "Sistem pengajuan yang sangat mudah, cepat, tepat sasaran, dan tanpa ada potongan biaya (Cair Full).",
+                  icon: <CheckCircle className="h-8 w-8 text-indigo-400" />,
                   color: "bg-indigo-500/10"
                 },
+                {
+                  title: "Unit Penumpang & Komersil",
+                  description: "Melayani pembiayaan berbagai jenis mobil baik penumpang maupun operasional/komersil (Tahun 2006 Up).",
+                  icon: <Car className="h-8 w-8 text-amber-400" />,
+                  color: "bg-amber-500/10"
+                },
+                {
+                  title: "Take Over & STNK Mati",
+                  description: "Kami bantu proses pemindahan (take over) dari bank/leasing lain, bahkan untuk kondisi STNK mati sekalipun.",
+                  icon: <RefreshCcw className="h-8 w-8 text-rose-400" />,
+                  color: "bg-rose-500/10"
+                },
+                {
+                  title: "Bunga Paling Kompetitif",
+                  description: "Penawaran rate bunga yang bersaing dengan pilihan tenor yang fleksibel sesuai kemampuan finansial Anda.",
+                  icon: <BadgePercent className="h-8 w-8 text-cyan-400" />,
+                  color: "bg-cyan-500/10"
+                },
               ].map((feature, idx) => (
-                <div key={idx} className="relative group p-8 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] transition-all duration-300">
-                  <div className={`w-16 h-16 rounded-2xl ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-white/10`}>
+                <div key={idx} className="relative group p-8 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(30,58,138,0.2)] transition-all duration-300">
+                  <div className={`w-14 h-14 rounded-2xl ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-white/5`}>
                     {feature.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-lg text-white/70 leading-relaxed font-medium">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3 tracking-tight">{feature.title}</h3>
+                  <p className="text-base text-white/60 leading-relaxed font-medium">{feature.description}</p>
                 </div>
               ))}
             </div>
