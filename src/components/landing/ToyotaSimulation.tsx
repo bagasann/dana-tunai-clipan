@@ -20,7 +20,10 @@ Nama :
 Alamat :
 No HP :
 Unit Kendaraan :
-Tahun :`;
+Tahun :
+Dana yang di butuhkan:
+
+Terima kasih`;
 
     const banners = [
         {
@@ -54,11 +57,12 @@ Tahun :`;
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                {/* 3 Simulation Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {banners.map((item, index) => (
                         <div key={index} className="group bg-white/5 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10 hover:border-blue-400/30 hover:shadow-[0_0_60px_rgba(30,58,138,0.4)] transition-all duration-500 flex flex-col relative focus-within:ring-2 focus-within:ring-blue-500">
-                            {/* Card Content: Image Only - Fixed Aspect Ratio */}
-                            <div className="relative aspect-[3/4.5] overflow-hidden bg-black/40">
+                            {/* Card Content: Image Only - Strategic Aspect Ratio */}
+                            <div className="relative aspect-[3/4.8] overflow-hidden bg-black/40">
                                 <img
                                     src={item.image}
                                     alt={item.alt}
@@ -84,6 +88,23 @@ Tahun :`;
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* Reward / Cuan Banner */}
+                <div className="mt-12 group">
+                    <Link
+                        href={`https://wa.me/6281214606160?text=${encodeURIComponent("Halo, saya ingin menanyakan tentang promo Reward/Hadiah 1 JT jaminan BPKB Mobil.")}`}
+                        target="_blank"
+                    >
+                        <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 hover:border-blue-400/30 hover:shadow-[0_0_60px_rgba(30,58,138,0.3)] transition-all duration-500">
+                            <img
+                                src="/reward-banner.jpg"
+                                alt="Reward Banner Dana Tunai"
+                                className="w-full h-auto block transform group-hover:scale-[1.01] transition-transform duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 to-transparent pointer-events-none"></div>
+                        </div>
+                    </Link>
                 </div>
 
                 <div className="mt-16 text-center text-[10px] font-bold text-white/20 uppercase tracking-[0.3em]">
