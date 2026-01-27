@@ -11,15 +11,23 @@ export default function Home() {
       <Hero />
 
       {/* Features Section */}
-      <section id="features" className="py-24 bg-white relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-blue-100 to-transparent"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="features" className="py-24 bg-blue-950 relative overflow-hidden">
+        {/* Background Image Overlay */}
+        <div
+          className="absolute inset-0 z-0 opacity-40 bg-cover bg-center"
+          style={{ backgroundImage: 'url("/features-bg.jpg")' }}
+        ></div>
+
+        {/* Gradient Overlay for better readability */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-blue-950 via-transparent to-blue-950"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="lg:text-center mb-16">
-            <h2 className="text-sm text-blue-600 font-extrabold tracking-[0.2em] uppercase mb-4">Keunggulan Kami</h2>
-            <p className="text-4xl md:text-5xl leading-tight font-black tracking-tight text-blue-950">
+            <h2 className="text-sm text-blue-400 font-extrabold tracking-[0.2em] uppercase mb-4 text-shadow-sm">Keunggulan Kami</h2>
+            <p className="text-4xl md:text-5xl leading-tight font-black tracking-tight text-white">
               Mengapa Memilih Solusi Mudah Kredit Mobil?
             </p>
-            <div className="w-20 h-1.5 bg-blue-600 lg:mx-auto mt-6 rounded-full"></div>
+            <div className="w-20 h-1.5 bg-blue-600 lg:mx-auto mt-6 rounded-full shadow-[0_0_15px_rgba(37,99,235,0.5)]"></div>
           </div>
 
           <div className="mt-10">
@@ -28,28 +36,28 @@ export default function Home() {
                 {
                   title: "Proses Tercepat",
                   description: "Dana cair hanya dalam hitungan jam setelah dokumen lengkap dan disetujui tanpa ribet.",
-                  icon: <Zap className="h-8 w-8 text-blue-600" />,
-                  color: "bg-blue-50"
+                  icon: <Zap className="h-8 w-8 text-blue-400" />,
+                  color: "bg-blue-500/10"
                 },
                 {
                   title: "Bunga Terendah",
                   description: "Nikmati suku bunga kompetitif mulai dari 0.8% yang tidak akan memberatkan angsuran bulanan Anda.",
-                  icon: <BadgePercent className="h-8 w-8 text-emerald-600" />,
-                  color: "bg-emerald-50"
+                  icon: <BadgePercent className="h-8 w-8 text-emerald-400" />,
+                  color: "bg-emerald-500/10"
                 },
                 {
                   title: "Aman & Legal",
                   description: "Seluruh proses transparan dan didukung oleh lembaga pembiayaan terkemuka di Indonesia.",
-                  icon: <ShieldCheck className="h-8 w-8 text-indigo-600" />,
-                  color: "bg-indigo-50"
+                  icon: <ShieldCheck className="h-8 w-8 text-indigo-400" />,
+                  color: "bg-indigo-500/10"
                 },
               ].map((feature, idx) => (
-                <div key={idx} className="relative group p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:border-blue-100 hover:bg-white hover:shadow-2xl transition-all duration-300">
-                  <div className={`w-16 h-16 rounded-2xl ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div key={idx} className="relative group p-8 bg-blue-900/40 backdrop-blur-sm rounded-3xl border border-blue-800/50 hover:border-blue-500/50 hover:bg-blue-900/60 hover:shadow-[0_0_30px_rgba(30,58,138,0.5)] transition-all duration-300">
+                  <div className={`w-16 h-16 rounded-2xl ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-white/10`}>
                     {feature.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                  <p className="text-lg text-gray-500 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-lg text-blue-100/70 leading-relaxed font-medium">{feature.description}</p>
                 </div>
               ))}
             </div>
