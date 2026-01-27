@@ -45,22 +45,20 @@ export const ToyotaSimulation = () => {
     )
 
     return (
-        <div id="simulation" className="py-20 bg-gradient-to-b from-blue-50/50 to-white relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-200 to-transparent"></div>
+        <div id="simulation" className="py-24 bg-blue-950 relative overflow-hidden">
+            {/* Background elements for premium feel */}
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-black text-blue-950 uppercase tracking-tight">
-                        Contoh Simulasi Toyota Avanza
-                    </h2>
-                    <div className="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
-                    <div className="mt-10 flex justify-center group">
+                    <div className="flex justify-center group pointer-events-none">
                         <div className="relative">
-                            <div className="absolute -inset-4 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+                            <div className="absolute -inset-10 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all duration-700"></div>
                             <img
-                                src="/avanza.png"
-                                alt="Toyota Avanza"
-                                className="relative w-full h-auto max-h-[400px] object-contain drop-shadow-2xl transform group-hover:scale-105 transition-transform duration-700"
+                                src="/alphard.jpg"
+                                alt="Dana Tunai Banner"
+                                className="relative w-full h-auto max-h-[500px] object-contain drop-shadow-[0_0_50px_rgba(30,144,255,0.2)] transform group-hover:scale-[1.02] transition-transform duration-1000"
                             />
                         </div>
                     </div>
@@ -68,24 +66,25 @@ export const ToyotaSimulation = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
                     {simulations.map((sim, index) => (
-                        <div key={index} className="group bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col relative">
-                            <div className="bg-emerald-500 py-5 text-center relative overflow-hidden">
-                                <div className="absolute top-0 right-0 p-4 opacity-10 transform translate-x-2 -translate-y-2">
+                        <div key={index} className="group bg-white/5 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 hover:border-blue-400/30 hover:shadow-[0_0_60px_rgba(30,58,138,0.4)] transition-all duration-500 flex flex-col relative">
+                            <div className="bg-blue-600/20 py-5 text-center relative overflow-hidden border-b border-white/5">
+                                <div className="absolute inset-0 bg-blue-600/10 group-hover:bg-blue-600/20 transition-colors duration-500"></div>
+                                <div className="absolute top-0 right-0 p-4 opacity-10 transform translate-x-2 -translate-y-2 group-hover:opacity-20 transition-opacity">
                                     <WhatsAppIcon />
                                 </div>
-                                <h3 className="text-white font-extrabold text-xl tracking-wide uppercase italic">{sim.tenor}</h3>
+                                <h3 className="text-white font-extrabold text-xl tracking-wider uppercase italic relative z-10">{sim.tenor}</h3>
                             </div>
                             <div className="p-8 flex-1 flex flex-col">
                                 <div className="mb-8 space-y-6">
-                                    <div className="pb-4 border-b border-gray-50">
-                                        <p className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1">Total Pencairan</p>
-                                        <p className="text-3xl font-black text-blue-950">{sim.cair}</p>
-                                    </div>
                                     <div>
-                                        <p className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1">Angsuran</p>
-                                        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                                            <p className="text-3xl font-black text-blue-900 leading-none">{sim.angsuran}</p>
-                                            <span className="text-[10px] font-black uppercase text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100 self-start">
+                                        <p className="text-blue-400/70 text-[10px] font-black uppercase tracking-[0.2em] mb-2">Total Pencairan</p>
+                                        <p className="text-4xl font-black text-white">{sim.cair}</p>
+                                    </div>
+                                    <div className="pt-6 border-t border-white/5">
+                                        <p className="text-blue-400/70 text-[10px] font-black uppercase tracking-[0.2em] mb-2">Angsuran Bulanan</p>
+                                        <div className="flex flex-col sm:flex-row sm:items-baseline gap-3">
+                                            <p className="text-3xl font-black text-blue-400 leading-none">{sim.angsuran}</p>
+                                            <span className="text-[10px] font-bold uppercase text-white bg-blue-600/40 px-3 py-1 rounded-md border border-white/10 self-start">
                                                 {sim.x_months}
                                             </span>
                                         </div>
@@ -94,9 +93,9 @@ export const ToyotaSimulation = () => {
 
                                 <ul className="space-y-4 mb-10 flex-1">
                                     {benefits.map((benefit, i) => (
-                                        <li key={i} className="flex items-center gap-3 text-sm font-semibold text-gray-600">
-                                            <div className="bg-emerald-100 rounded-full p-1">
-                                                <Check className="h-3 w-3 text-emerald-600 stroke-[4px]" />
+                                        <li key={i} className="flex items-center gap-3 text-sm font-medium text-white/70 group-hover:text-white/90 transition-colors">
+                                            <div className="bg-blue-500/20 rounded-full p-1.5 border border-blue-400/20">
+                                                <Check className="h-3 w-3 text-blue-400 stroke-[4px]" />
                                             </div>
                                             <span>{benefit}</span>
                                         </li>
@@ -104,16 +103,16 @@ export const ToyotaSimulation = () => {
                                 </ul>
 
                                 <Link
-                                    href={`https://wa.me/6281214606160?text=Halo, saya tertarik dengan simulasi Toyota Avanza ${sim.tenor}. Mohon informasinya lebih lanjut.`}
+                                    href={`https://wa.me/6281214606160?text=Halo, saya tertarik dengan simulasi Dana Tunai ${sim.tenor}. Mohon informasinya lebih lanjut.`}
                                     target="_blank"
                                     className="w-full"
                                 >
                                     <Button
                                         variant="cta"
-                                        className="w-full py-7 text-lg h-auto"
+                                        className="w-full py-8 text-xl h-auto bg-blue-600 hover:bg-blue-500 shadow-[0_10px_30px_rgba(37,99,235,0.3)] hover:shadow-[0_15px_40px_rgba(37,99,235,0.5)] transition-all flex items-center justify-center gap-3"
                                     >
                                         <WhatsAppIcon />
-                                        Ajukan Sekarang
+                                        <span>Ajukan Sekarang</span>
                                     </Button>
                                 </Link>
                             </div>
@@ -121,7 +120,7 @@ export const ToyotaSimulation = () => {
                     ))}
                 </div>
 
-                <div className="mt-12 text-center text-xs font-bold text-gray-400 uppercase tracking-widest">
+                <div className="mt-16 text-center text-[10px] font-bold text-white/20 uppercase tracking-[0.3em]">
                     Perhitungan kredit ini bersifat estimasi, serta dapat berubah sewaktu-waktu tanpa pemberitahuan terlebih dahulu.
                 </div>
             </div>
