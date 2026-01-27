@@ -54,15 +54,15 @@ Tahun :`;
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {banners.map((item, index) => (
-                        <div key={index} className="group bg-white/5 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 hover:border-blue-400/30 hover:shadow-[0_0_60px_rgba(30,58,138,0.4)] transition-all duration-500 flex flex-col relative focus-within:ring-2 focus-within:ring-blue-500">
-                            {/* Card Content: Image Only - Variable Aspect Ratio */}
-                            <div className="relative w-full overflow-hidden bg-black/40">
+                        <div key={index} className="group bg-white/5 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10 hover:border-blue-400/30 hover:shadow-[0_0_60px_rgba(30,58,138,0.4)] transition-all duration-500 flex flex-col relative focus-within:ring-2 focus-within:ring-blue-500">
+                            {/* Card Content: Image Only - Fixed Aspect Ratio */}
+                            <div className="relative aspect-[3/4.5] overflow-hidden bg-black/40">
                                 <img
                                     src={item.image}
                                     alt={item.alt}
-                                    className="w-full h-auto transform group-hover:scale-105 transition-transform duration-1000 block"
+                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 block"
                                 />
                             </div>
 
