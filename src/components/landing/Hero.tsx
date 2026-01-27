@@ -1,8 +1,34 @@
 
+"use client"
+
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { useState, useEffect, useCallback } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export function Hero() {
+    const images = [
+        "/hero.png",
+        "/hero2.png", // User needs to provide this
+        "/hero3.png", // User needs to provide this
+        "/hero4.png", // User needs to provide this
+    ]
+
+    const [currentSlide, setCurrentSlide] = useState(0)
+
+    const nextSlide = useCallback(() => {
+        setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1))
+    }, [images.length])
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1))
+    }
+
+    useEffect(() => {
+        const timer = setInterval(nextSlide, 5000)
+        return () => clearInterval(timer)
+    }, [nextSlide])
+
     return (
         <div className="relative bg-white overflow-hidden pt-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,15 +56,59 @@ export function Hero() {
                         </div>
                     </div>
 
-                    {/* Image Section */}
+                    {/* Image Section (Carousel) */}
                     <div className="flex-1 w-full flex items-center justify-center">
-                        <div className="relative w-full max-w-[600px] aspect-[4/3] group">
+                        <div className="relative w-full max-w-[600px] aspect-[4/3] group overflow-hidden rounded-2xl">
                             <div className="absolute -inset-4 bg-blue-100/50 rounded-[2rem] blur-2xl group-hover:bg-blue-200/50 transition-all duration-500"></div>
-                            <img
-                                src="/hero.png"
-                                alt="Solusi Dana Tunai Mobil"
-                                className="relative object-contain w-full h-full drop-shadow-2xl transform group-hover:scale-[1.05] transition-transform duration-700 rounded-2xl"
-                            />
+
+                            {/* Slides */}
+                            <div
+                                className="relative w-full h-full flex transition-transform duration-700 ease-in-out"
+                                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                            >
+                                {images.map((img, idx) => (
+                                    <div key={idx} className="w-full h-full flex-shrink-0">
+                                        <img
+                                            src={img}
+                                            alt={`Slide ${idx + 1}`}
+                                            className="w-full h-full object-contain drop-shadow-2xl"
+                                            onError={(e) => {
+                                                // Fallback if image not found
+                                                (e.target as HTMLImageElement).src = "/hero.png"
+                                            }}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Navigation Arrows */}
+                            <button
+                                onClick={prevSlide}
+                                className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 text-blue-900 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white"
+                                aria-label="Previous slide"
+                            >
+                                <ChevronLeft className="w-6 h-6" />
+                            </button>
+                            <button
+                                onClick={nextSlide}
+                                className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 text-blue-900 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-20 hover:bg-white"
+                                aria-label="Next slide"
+                            >
+                                <ChevronRight className="w-6 h-6" />
+                            </button>
+
+                            {/* Indicators */}
+                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                                {images.map((_, idx) => (
+                                    <button
+                                        key={idx}
+                                        onClick={() => setCurrentSlide(idx)}
+                                        className={`w-2 h-2 rounded-full transition-all ${currentSlide === idx ? "bg-blue-700 w-4" : "bg-blue-200"
+                                            }`}
+                                        aria-label={`Go to slide ${idx + 1}`}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
