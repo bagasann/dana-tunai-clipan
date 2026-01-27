@@ -21,10 +21,10 @@ export function Hero() {
                         <div className="sm:text-center lg:text-left">
                             <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                                 <span className="block xl:inline">Solusi Dana Tunai</span>{" "}
-                                <span className="block text-primary xl:inline">Cepat & Aman</span>
+                                <span className="block text-blue-700 xl:inline leading-tight">Cepat & Aman</span>
                             </h1>
                             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                                Ajukan pinjaman dana tunai dengan jaminan BPKB Mobil. Proses mudah, bunga kompetitif, dan terpercaya. Support by CLIPAN FINANCE.
+                                Ajukan pinjaman dana tunai dengan jaminan BPKB Mobil. Proses mudah, bunga kompetitif, dan terpercaya.
                             </p>
                             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                 <div className="rounded-md shadow">
@@ -46,10 +46,14 @@ export function Hero() {
                     </main>
                 </div>
             </div>
-            <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <div className="h-56 w-full bg-gray-200 sm:h-72 md:h-96 lg:w-full lg:h-full flex items-center justify-center text-gray-400">
-                    {/* Placeholder for image */}
-                    <span className="text-lg font-medium">Hero Image Area</span>
+            <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 overflow-hidden">
+                <div className="h-56 w-full sm:h-72 md:h-96 lg:w-full lg:h-full relative overflow-hidden group">
+                    <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                    <img
+                        src="/hero.png"
+                        alt="Solusi Dana Tunai Mobil"
+                        className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-1000"
+                    />
                 </div>
             </div>
         </div>

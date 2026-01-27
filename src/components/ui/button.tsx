@@ -10,15 +10,17 @@ const buttonVariants = cva(
     {
         variants: {
             variant: {
-                default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow hover:shadow-md",
+                default: "bg-gradient-to-r from-blue-700 to-blue-900 text-white shadow-[0_4px_0_0_rgba(15,23,42,1)] hover:shadow-[0_2px_0_0_rgba(15,23,42,1)] hover:translate-y-[2px] active:shadow-none active:translate-y-[4px] border-b-4 border-blue-950",
                 destructive:
-                    "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+                    "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-sm",
                 outline:
-                    "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+                    "border-2 border-primary bg-background text-primary hover:bg-primary/10",
                 secondary:
-                    "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+                    "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm",
                 ghost: "hover:bg-accent hover:text-accent-foreground",
                 link: "text-primary underline-offset-4 hover:underline",
+                premium: "bg-gradient-to-r from-emerald-500 to-emerald-700 text-white shadow-[0_4px_0_0_rgba(6,78,59,1)] hover:shadow-[0_2px_0_0_rgba(6,78,59,1)] hover:translate-y-[2px] active:shadow-none active:translate-y-[4px] border-b-4 border-emerald-900 font-bold",
+                cta: "bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-[0_6px_0_0_rgba(30,58,138,1)] hover:shadow-[0_3px_0_0_rgba(30,58,138,1)] hover:translate-y-[3px] active:shadow-none active:translate-y-[6px] border-b-4 border-blue-900 font-black uppercase tracking-widest",
             },
             size: {
                 default: "h-10 px-4 py-2",

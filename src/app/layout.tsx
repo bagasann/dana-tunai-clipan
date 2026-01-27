@@ -6,7 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dana Tunai Support by CLIPAN",
+  title: "Dana Tunai Support by Solusi Mudah Kredit Mobil",
   description: "Ajukan pinjaman dana tunai jaminan BPKB mobil dengan mudah dan cepat.",
 };
 
