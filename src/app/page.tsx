@@ -1,6 +1,7 @@
 
 import { Hero } from "@/components/landing/Hero";
 import { Navbar } from "@/components/landing/Navbar";
+import { ToyotaSimulation } from "@/components/landing/ToyotaSimulation";
 
 export default function Home() {
   return (
@@ -49,15 +50,14 @@ export default function Home() {
         </div>
       </div>
 
+      <ToyotaSimulation />
+
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-base text-gray-400">
-            &copy; {new Date().getFullYear()} Dana Tunai Support by CLIPAN. All rights reserved.
+            &copy; {new Date().getFullYear()} Dana Tunai Support by Solusi Mudah Kredit Mobil. All rights reserved.
           </p>
-          <div className="mt-4">
-            <a href="https://wa.me/628993646841" className="text-gray-400 hover:text-white mx-2">WhatsApp</a>
-          </div>
         </div>
       </footer>
     </div>

@@ -4,6 +4,7 @@
 import { useState } from "react"
 import { createClient } from "@/lib/supabase/client"
 import { Button } from "@/components/ui/button"
+import { ArrowLeft } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Link from "next/link"
@@ -51,7 +52,13 @@ export default function LoginPage() {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 flex-col">
+            <div className="w-full max-w-md mb-4">
+                <Link href="/" className="inline-flex items-center text-sm text-gray-500 hover:text-gray-700 transition-colors">
+                    <ArrowLeft className="mr-2 h-4 w-4" />
+                    Kembali ke Beranda
+                </Link>
+            </div>
             <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow">
                 <div>
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
