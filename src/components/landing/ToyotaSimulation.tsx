@@ -108,7 +108,7 @@ Terima kasih`;
                 </div>
 
                 {/* Marketing Recruitment Banner */}
-                <div className="mt-8 group">
+                <div className="mt-8 group max-w-2xl mx-auto">
                     <Link
                         href={`https://wa.me/6281214606160?text=${encodeURIComponent(`Semangat pagi, saya berminat menjadi marketing 
 
