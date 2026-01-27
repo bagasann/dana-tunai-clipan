@@ -27,10 +27,10 @@ const ImageWithFallback = ({ src, alt, fallbackSrc = "/hero.png", className }: {
 
 export function Hero() {
     const images = [
+        "/hero-red.jpg",
+        "/hero-black.jpg",
+        "/alphard.jpg",
         "/hero.png",
-        "/hero2.png",
-        "/hero3.png",
-        "/hero4.png",
     ]
 
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -90,7 +90,7 @@ export function Hero() {
                                         <ImageWithFallback
                                             src={img}
                                             alt={`Slide ${idx + 1}`}
-                                            className="w-full h-full object-contain drop-shadow-2xl"
+                                            className="w-full h-full object-cover"
                                         />
                                     </div>
                                 ))}
