@@ -54,25 +54,50 @@ export function Hero() {
                 <div className="flex flex-col lg:flex-row items-center py-12 lg:py-24 gap-12">
                     {/* Text Section */}
                     <div className="flex-1 text-center lg:text-left z-10">
-                        <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                            <span className="block xl:inline">Solusi Dana Tunai</span>{" "}
-                            <span className="block text-blue-700 xl:inline leading-tight">Cepat & Aman</span>
+                        <div className="mb-4">
+                            <span className="inline-block py-1 px-4 rounded-full bg-blue-100 text-blue-700 text-sm font-black tracking-widest uppercase">
+                                Bandung & Sekitarnya
+                            </span>
+                        </div>
+                        <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl mb-6">
+                            <span className="block xl:inline">DANA TUNAI DAN</span>{" "}
+                            <span className="block text-blue-700 xl:inline leading-tight">KREDIT MOBIL BEKAS</span>
                         </h1>
-                        <p className="mt-6 text-base text-gray-500 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0 md:text-xl">
-                            Ajukan pinjaman dana tunai dengan jaminan BPKB Mobil. Proses mudah, bunga kompetitif, dan terpercaya.
+                        <p className="mt-6 text-base text-gray-500 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0 md:text-xl leading-relaxed">
+                            Ajukan pinjaman dana tunai dengan jaminan bpkb mobil min tahun 2006 untuk segala kebutuhan anda, serta layanan pembiayan mobil bekas baik mobil penumpang ataupun komersil.
                         </p>
-                        <div className="mt-8 sm:flex sm:justify-center lg:justify-start gap-4">
+
+                        <div className="mt-10 mb-8 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-6">
+                            <div className="flex items-center gap-3">
+                                <div className="h-2 w-2 rounded-full bg-blue-600"></div>
+                                <span className="text-sm font-black text-gray-800 uppercase tracking-wider">Proses Mudah</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <div className="h-2 w-2 rounded-full bg-blue-600"></div>
+                                <span className="text-sm font-black text-gray-800 uppercase tracking-wider">Cair 90 % Up</span>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <div className="h-2 w-2 rounded-full bg-blue-600"></div>
+                                <span className="text-sm font-black text-gray-800 uppercase tracking-wider">Aman & Terpercaya</span>
+                            </div>
+                        </div>
+
+                        <div className="mt-8 sm:flex sm:justify-center lg:justify-start gap-4 items-center">
                             <Link href="#simulation">
-                                <Button size="lg" className="w-full sm:w-auto shadow-xl">
+                                <Button size="lg" className="w-full sm:w-auto shadow-xl h-14 px-10 text-lg rounded-2xl">
                                     Simulasi Pinjaman
                                 </Button>
                             </Link>
                             <Link href="https://wa.me/6281214606160" target="_blank">
-                                <Button variant="outline" size="lg" className="w-full sm:w-auto mt-3 sm:mt-0">
+                                <Button variant="outline" size="lg" className="w-full sm:w-auto mt-3 sm:mt-0 h-14 px-10 text-lg rounded-2xl border-2">
                                     Hubungi Kami
                                 </Button>
                             </Link>
                         </div>
+
+                        <p className="mt-8 text-xs font-black text-gray-400 uppercase tracking-[0.3em] font-mono">
+                            Support all leasing
+                        </p>
                     </div>
 
                     {/* Image Section (Carousel) */}
