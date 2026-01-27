@@ -120,11 +120,11 @@ Pekerjaan saat ini :
 Terima kasih`)}`}
                         target="_blank"
                     >
-                        <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 hover:border-blue-400/30 hover:shadow-[0_0_60px_rgba(30,58,138,0.3)] transition-all duration-500">
+                        <div className="relative w-full max-h-[350px] rounded-2xl overflow-hidden border border-white/10 hover:border-blue-400/30 hover:shadow-[0_0_60px_rgba(30,58,138,0.3)] transition-all duration-500">
                             <img
                                 src="/marketing-banner.jpg"
                                 alt="Marketing Recruitment Banner"
-                                className="w-full h-auto block transform group-hover:scale-[1.01] transition-transform duration-700"
+                                className="w-full h-full object-cover block transform group-hover:scale-[1.01] transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 to-transparent pointer-events-none"></div>
                         </div>
