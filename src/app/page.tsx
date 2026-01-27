@@ -52,12 +52,12 @@ export default function Home() {
                   color: "bg-indigo-500/10"
                 },
               ].map((feature, idx) => (
-                <div key={idx} className="relative group p-8 bg-blue-900/40 backdrop-blur-sm rounded-3xl border border-blue-800/50 hover:border-blue-500/50 hover:bg-blue-900/60 hover:shadow-[0_0_30px_rgba(30,58,138,0.5)] transition-all duration-300">
+                <div key={idx} className="relative group p-8 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(255,255,255,0.05)] transition-all duration-300">
                   <div className={`w-16 h-16 rounded-2xl ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-white/10`}>
                     {feature.icon}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-lg text-blue-100/70 leading-relaxed font-medium">{feature.description}</p>
+                  <p className="text-lg text-white/70 leading-relaxed font-medium">{feature.description}</p>
                 </div>
               ))}
             </div>
