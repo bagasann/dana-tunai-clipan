@@ -1,6 +1,7 @@
 import { Hero } from "@/components/landing/Hero";
 import { Navbar } from "@/components/landing/Navbar";
 import { ToyotaSimulation } from "@/components/landing/ToyotaSimulation";
+import { PartnerMarquee } from "@/components/landing/PartnerMarquee";
 import { Zap, ShieldCheck, BadgePercent, Monitor, MapPin, CheckCircle, Car, RefreshCcw, FileX } from "lucide-react";
 
 export default function Home() {
@@ -81,6 +82,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <PartnerMarquee />
 
       <ToyotaSimulation />
 
