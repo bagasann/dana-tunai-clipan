@@ -10,6 +10,7 @@ const partners = [
     { name: "Clipan Finance", logo: "/partners/clipan.png" },
     { name: "Buana Finance", logo: "/partners/buana.png" },
     { name: "BFI Syariah", logo: "/partners/bfi-syariah.png" },
+    { name: "WOM Finance", logo: "/partners/wom.png" },
 ];
 
 export const PartnerMarquee = () => {
