@@ -27,14 +27,14 @@ export const PartnerMarquee = () => {
                 </div>
             </div>
 
-            <div className="relative flex overflow-x-hidden group pause-on-hover">
+            <div className="relative flex overflow-x-hidden group pause-on-hover px-4">
                 <div className="animate-marquee whitespace-nowrap flex items-center">
                     {partners.map((partner, idx) => (
-                        <div key={idx} className="mx-12 md:mx-20 flex items-center justify-center min-w-[120px]">
+                        <div key={idx} className="mx-12 md:mx-16 flex items-center justify-center min-w-[140px]">
                             <img
                                 src={partner.logo}
                                 alt={partner.name}
-                                className="h-12 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300"
+                                className="h-16 md:h-24 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
                         </div>
                     ))}
@@ -42,11 +42,11 @@ export const PartnerMarquee = () => {
 
                 <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex items-center">
                     {partners.map((partner, idx) => (
-                        <div key={`dup-${idx}`} className="mx-12 md:mx-20 flex items-center justify-center min-w-[120px]">
+                        <div key={`dup-${idx}`} className="mx-12 md:mx-16 flex items-center justify-center min-w-[140px]">
                             <img
                                 src={partner.logo}
                                 alt={partner.name}
-                                className="h-12 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300"
+                                className="h-16 md:h-24 w-auto object-contain hover:scale-110 transition-transform duration-300"
                             />
                         </div>
                     ))}
